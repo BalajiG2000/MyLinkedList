@@ -1,3 +1,7 @@
+"
+I represent a Node
+I have data and a link to next node
+"
 Class {
 	#name : #MyBasicLinkedlist,
 	#superclass : #Object,
