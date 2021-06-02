@@ -19,3 +19,11 @@ BasicLinkedListTest >> testisEmpty [
 emptyList := BasicLinkedList new.
 self assertEmpty: emptyList 
 ]
+
+{ #category : #tests }
+BasicLinkedListTest >> testremoveAll [
+| emptylist  |
+emptylist  := BasicLinkedList  new.
+emptylist removeAll .
+self assert: emptylist size equals: 0.
+]

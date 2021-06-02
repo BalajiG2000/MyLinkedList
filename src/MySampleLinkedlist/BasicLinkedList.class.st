@@ -36,3 +36,9 @@ BasicLinkedList >> isEmpty [
     ^ true ifNil: head .    "if list empty"
     
 ]
+
+{ #category : #adding }
+BasicLinkedList >> removeAll [
+	head:=nil.
+	tail:=nil. 
+]
