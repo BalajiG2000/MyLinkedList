@@ -1,20 +1,27 @@
 Class {
 	#name : #BasicLinkedList,
-	#superclass : #Object,
+	#superclass : #OrderedCollection,
 	#instVars : [
-		'head',
-		'tail'
+		'head'
 	],
 	#category : #MySampleLinkedlist
 }
 
 { #category : #adding }
-BasicLinkedList >> addLast: aLink [
+BasicLinkedList >> add: aLink [
    "Adding new node to the end of linkedlist"
    | link |
     link := aLink.
-    tail ifNotNil: [ tail nextlink: link ]. "If list is preoccupied"
     head ifNil: [ head := link ].           "if list empty"
-    tail := link.                           "update last node"
     ^ link
+]
+
+{ #category : #enumerating }
+BasicLinkedList >> do: aBlock [
+	"Evaluate aBlock with each of the receiver's elements as the argument."
+	|samplelist|
+samplelist do: aBlock
+
+
+	
 ]

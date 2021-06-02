@@ -12,3 +12,10 @@ BasicLinkedListTest >> testNewList [
 | emptyList |
 emptyList := BasicLinkedList new.
 ]
+
+{ #category : #tests }
+BasicLinkedListTest >> testisEmpty [
+| emptyList |
+emptyList := BasicLinkedList new.
+self assertEmpty: emptyList 
+]
