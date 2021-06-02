@@ -27,3 +27,11 @@ emptylist  := BasicLinkedList  new.
 emptylist removeAll .
 self assert: emptylist size equals: 0.
 ]
+
+{ #category : #tests }
+BasicLinkedListTest >> testsize [ 
+|emptylist|
+emptylist :=BasicLinkedList new.
+self assert: emptylist size equals: 0.
+
+]
