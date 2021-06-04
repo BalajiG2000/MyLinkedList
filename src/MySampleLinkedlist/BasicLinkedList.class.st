@@ -39,6 +39,7 @@ BasicLinkedList >> isEmpty [
 
 { #category : #adding }
 BasicLinkedList >> removeAll [
+"removes all the nodes in the list but doesnot delete the nodes and memory"
 	head:=nil.
 	tail:=nil. 
 ]
