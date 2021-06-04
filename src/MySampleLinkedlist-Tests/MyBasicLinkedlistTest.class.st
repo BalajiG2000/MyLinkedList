@@ -9,6 +9,7 @@ Class {
 
 { #category : #tests }
 MyBasicLinkedlistTest >> testNewNode [
+"Test for a new node creation"
 | EmptyNode |
 EmptyNode := MyBasicLinkedlist new.
 ]
