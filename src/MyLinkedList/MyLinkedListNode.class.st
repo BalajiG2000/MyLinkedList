@@ -6,21 +6,11 @@ Class {
 	#name : #MyLinkedListNode,
 	#superclass : #Object,
 	#instVars : [
-		'data',
+		'value',
 		'nextNode'
 	],
 	#category : #MyLinkedList
 }
-
-{ #category : #accessing }
-MyLinkedListNode >> data [
-	^data
-]
-
-{ #category : #accessing }
-MyLinkedListNode >> data: aValue [
-	data:=  aValue 
-]
 
 { #category : #accessing }
 MyLinkedListNode >> nextNode [
@@ -30,4 +20,14 @@ MyLinkedListNode >> nextNode [
 { #category : #accessing }
 MyLinkedListNode >> nextNode: aNode [
     nextNode := aNode 
+]
+
+{ #category : #accessing }
+MyLinkedListNode >> value [
+	^ value
+]
+
+{ #category : #accessing }
+MyLinkedListNode >> value: aValue [
+	value:=  aValue 
 ]
