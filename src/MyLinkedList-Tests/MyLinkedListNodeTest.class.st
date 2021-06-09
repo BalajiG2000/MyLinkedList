@@ -8,8 +8,18 @@ Class {
 }
 
 { #category : #tests }
-MyLinkedListNodeTest >> testNewNode [
-"Test for a new node creation"
-| EmptyNode |
-EmptyNode := MyLinkedListNode new.
+MyLinkedListNodeTest >> testValue [
+	| node |
+	node := MyLinkedListNode new.
+	node value: #first.
+	self assert: node value equals: #first.
+]
+
+{ #category : #tests }
+MyLinkedListNodeTest >> testnextNode [
+	| node1 node2 |
+	node1 := MyLinkedListNode new.
+	node2 := MyLinkedListNode new.
+	node1 nextNode: node2.
+	self assert: node1 nextNode equals: node2.
 ]
