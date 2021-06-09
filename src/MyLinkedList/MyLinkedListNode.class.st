@@ -7,27 +7,27 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'data',
-		'nextlink'
+		'nextNode'
 	],
 	#category : #MyLinkedList
 }
 
 { #category : #accessing }
 MyLinkedListNode >> data [
-	^data "Returns the data in the node"
+	^data
 ]
 
 { #category : #accessing }
 MyLinkedListNode >> data: newValue [
-	data:=  newValue "Assign the data for each node"
+	data:=  newValue 
 ]
 
 { #category : #accessing }
-MyLinkedListNode >> nextlink [
-    ^ nextlink "Returns the next linked node"
+MyLinkedListNode >> nextNode [
+    ^ nextNode
 ]
 
 { #category : #accessing }
-MyLinkedListNode >> nextlink: newlink [
-    nextlink := newlink "Points the next link"
+MyLinkedListNode >> nextNode: aNode [
+    nextNode := aNode 
 ]
