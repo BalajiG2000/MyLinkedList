@@ -3,7 +3,7 @@ I represent a Node
 I have data and a link to next node
 "
 Class {
-	#name : #MyBasicLinkedlist,
+	#name : #MyLinkedListNode,
 	#superclass : #Object,
 	#instVars : [
 		'data',
@@ -13,21 +13,21 @@ Class {
 }
 
 { #category : #accessing }
-MyBasicLinkedlist >> data [
+MyLinkedListNode >> data [
 	^data "Returns the data in the node"
 ]
 
 { #category : #accessing }
-MyBasicLinkedlist >> data: newValue [
+MyLinkedListNode >> data: newValue [
 	data:=  newValue "Assign the data for each node"
 ]
 
 { #category : #accessing }
-MyBasicLinkedlist >> nextlink [
+MyLinkedListNode >> nextlink [
     ^ nextlink "Returns the next linked node"
 ]
 
 { #category : #accessing }
-MyBasicLinkedlist >> nextlink: newlink [
+MyLinkedListNode >> nextlink: newlink [
     nextlink := newlink "Points the next link"
 ]

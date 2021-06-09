@@ -2,36 +2,36 @@
 A BasicLinkedListTest is a test class for testing the behavior of BasicLinkedList
 "
 Class {
-	#name : #BasicLinkedListTest,
+	#name : #MyLinkedListTest,
 	#superclass : #TestCase,
 	#category : #'MyLinkedList-Tests'
 }
 
 { #category : #tests }
-BasicLinkedListTest >> testNewList [
+MyLinkedListTest >> testNewList [
 | emptyList |
-emptyList := BasicLinkedList new.
+emptyList := MyLinkedList new.
 ]
 
 { #category : #tests }
-BasicLinkedListTest >> testisEmpty [
+MyLinkedListTest >> testisEmpty [
 | emptyList |
-emptyList := BasicLinkedList new.
+emptyList := MyLinkedList new.
 self assertEmpty: emptyList 
 ]
 
 { #category : #tests }
-BasicLinkedListTest >> testremoveAll [
+MyLinkedListTest >> testremoveAll [
 | emptylist  |
-emptylist  := BasicLinkedList  new.
+emptylist  := MyLinkedList  new.
 emptylist removeAll .
 self assert: emptylist size equals: 0.
 ]
 
 { #category : #tests }
-BasicLinkedListTest >> testsize [ 
+MyLinkedListTest >> testsize [ 
 |emptylist|
-emptylist :=BasicLinkedList new.
+emptylist :=MyLinkedList new.
 self assert: emptylist size equals: 0.
 
 ]

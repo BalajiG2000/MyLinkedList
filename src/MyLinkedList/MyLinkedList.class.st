@@ -3,7 +3,7 @@ I represent a collection of Node
 I can add, traverse, delete nodes
 "
 Class {
-	#name : #BasicLinkedList,
+	#name : #MyLinkedList,
 	#superclass : #OrderedCollection,
 	#instVars : [
 		'head',
@@ -13,13 +13,13 @@ Class {
 }
 
 { #category : #adding }
-BasicLinkedList >> add: anobject [
+MyLinkedList >> add: anobject [
    "Adding new node to the end of linkedlist"
    ^self addLast: anobject 
 ]
 
 { #category : #adding }
-BasicLinkedList >> addLast: anObject [
+MyLinkedList >> addLast: anObject [
 "Adding new node to the end of linkedlist"
    | link |
 	link := anObject.
@@ -30,7 +30,7 @@ BasicLinkedList >> addLast: anObject [
 ]
 
 { #category : #adding }
-BasicLinkedList >> isEmpty [ 
+MyLinkedList >> isEmpty [ 
    "Check for an empty list"
   
     ^ true ifNil: head .    "if list empty"
@@ -38,7 +38,7 @@ BasicLinkedList >> isEmpty [
 ]
 
 { #category : #adding }
-BasicLinkedList >> removeAll [
+MyLinkedList >> removeAll [
 "removes all the nodes in the list but doesnot delete the nodes and memory"
 	head:=nil.
 	tail:=nil. 
