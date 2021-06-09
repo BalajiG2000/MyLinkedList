@@ -8,30 +8,36 @@ Class {
 }
 
 { #category : #tests }
-MyLinkedListTest >> testNewList [
-| emptyList |
-emptyList := MyLinkedList new.
+MyLinkedListTest >> testAdd [
+
+	|list|
+	list:= MyLinkedList new.
+	list add: #first.
+	self assert: list size equals: 1.
 ]
 
 { #category : #tests }
-MyLinkedListTest >> testisEmpty [
-| emptyList |
-emptyList := MyLinkedList new.
-self assertEmpty: emptyList 
+MyLinkedListTest >> testIsEmpty [
+	| list |
+	list := MyLinkedList new.
+	self assertEmpty: list 
 ]
 
 { #category : #tests }
-MyLinkedListTest >> testremoveAll [
-| emptylist  |
-emptylist  := MyLinkedList  new.
-emptylist removeAll .
-self assert: emptylist size equals: 0.
+MyLinkedListTest >> testRemoveAll [
+	| list  |
+	list  := MyLinkedList  new.
+	list add:  #first.
+	list add: #second.
+	list removeAll .
+	self assert: list size equals: 0.
 ]
 
 { #category : #tests }
 MyLinkedListTest >> testsize [ 
-|emptylist|
-emptylist :=MyLinkedList new.
-self assert: emptylist size equals: 0.
+	|list|
+	list :=MyLinkedList new.
+	list add: #first; add: #second.
+	self assert: list size equals: 2.
 
 ]
