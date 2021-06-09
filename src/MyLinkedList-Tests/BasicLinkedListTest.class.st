@@ -4,7 +4,7 @@ A BasicLinkedListTest is a test class for testing the behavior of BasicLinkedLis
 Class {
 	#name : #BasicLinkedListTest,
 	#superclass : #TestCase,
-	#category : #'MySampleLinkedlist-Tests'
+	#category : #'MyLinkedList-Tests'
 }
 
 { #category : #tests }

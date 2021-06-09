@@ -9,7 +9,7 @@ Class {
 		'data',
 		'nextlink'
 	],
-	#category : #MySampleLinkedlist
+	#category : #MyLinkedList
 }
 
 { #category : #accessing }

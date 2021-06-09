@@ -9,7 +9,7 @@ Class {
 		'head',
 		'tail'
 	],
-	#category : #MySampleLinkedlist
+	#category : #MyLinkedList
 }
 
 { #category : #adding }
