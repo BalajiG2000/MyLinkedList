@@ -4,7 +4,7 @@ A MyBasicLinkedlistTest is a test class for testing the behavior of MyBasicLinke
 Class {
 	#name : #MyBasicLinkedlistTest,
 	#superclass : #TestCase,
-	#category : #'MySampleLinkedlist-Tests'
+	#category : #'MyLinkedList-Tests'
 }
 
 { #category : #tests }
