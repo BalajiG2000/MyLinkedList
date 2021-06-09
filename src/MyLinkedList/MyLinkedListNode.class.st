@@ -18,8 +18,8 @@ MyLinkedListNode >> data [
 ]
 
 { #category : #accessing }
-MyLinkedListNode >> data: newValue [
-	data:=  newValue 
+MyLinkedListNode >> data: aValue [
+	data:=  aValue 
 ]
 
 { #category : #accessing }
