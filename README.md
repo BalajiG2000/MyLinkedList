@@ -5,7 +5,7 @@ A sample Linkedlist implementation to understand the working of Iceberg, TDD and
 ````Smalltalk
 
 Metacello new
-	githubUser: 'BalajiG2000' project: 'MyLinkedList' commitish: 'master' path: 'src';
+	repository: 'github://BalajiG2000/MyLinkedList';
 	baseline: 'MyLinkedList';
 	load 
 ````
