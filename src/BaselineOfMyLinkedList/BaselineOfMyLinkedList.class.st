@@ -12,5 +12,5 @@ BaselineOfMyLinkedList >> baseline: spec [
 		"Packages"
 		spec 
 			package: 'MyLinkedList';
-			package: 'MyLinkedList-Tests' "with: [ spec requires: #('MyLinkedList') ]"].
+			package: 'MyLinkedList-Tests' with: [ spec requires: #('MyLinkedList') ]].
 ]
