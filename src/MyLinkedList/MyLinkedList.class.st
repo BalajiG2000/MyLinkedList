@@ -29,9 +29,11 @@ MyLinkedList >> addLast: anObject [
 	^ node
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 MyLinkedList >> at: anInteger [ 
 	| current count |
+	anInteger < 1 ifTrue:
+		 [self errorSubscriptBounds: anInteger].
 	current:=head.
 	count:=1. 
 	[ anInteger = count ] whileFalse: [ 
@@ -42,14 +44,14 @@ MyLinkedList >> at: anInteger [
 	
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 MyLinkedList >> removeAll [
 "removes all the nodes in the list but doesnot delete the nodes and memory"
 	head:=nil.
 	tail:=nil. 
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 MyLinkedList >> size [ 
 
 	| current count |

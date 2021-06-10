@@ -22,7 +22,7 @@ MyLinkedListTest >> testAt [
 	list  := MyLinkedList  new.
 	list add:  #first.
 	list add: #second.
-	self assert: (list at: 1) equals: #first.
+	self assert: (list at: 2) equals: #second.
 ]
 
 { #category : #tests }
