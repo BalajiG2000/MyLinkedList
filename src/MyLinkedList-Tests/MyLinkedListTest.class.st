@@ -17,6 +17,15 @@ MyLinkedListTest >> testAdd [
 ]
 
 { #category : #tests }
+MyLinkedListTest >> testAt [
+	| list  |
+	list  := MyLinkedList  new.
+	list add:  #first.
+	list add: #second.
+	self assert: (list at: 1) equals: #first.
+]
+
+{ #category : #tests }
 MyLinkedListTest >> testIsEmpty [
 	| list |
 	list := MyLinkedList new.

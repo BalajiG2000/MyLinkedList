@@ -30,6 +30,19 @@ MyLinkedList >> addLast: anObject [
 ]
 
 { #category : #adding }
+MyLinkedList >> at: anInteger [ 
+	| current count |
+	current:=head.
+	count:=1. 
+	[ anInteger = count ] whileFalse: [ 
+	count:=count+1.
+		current := current nextNode.].
+	^ current value. 
+	
+	
+]
+
+{ #category : #adding }
 MyLinkedList >> removeAll [
 "removes all the nodes in the list but doesnot delete the nodes and memory"
 	head:=nil.
