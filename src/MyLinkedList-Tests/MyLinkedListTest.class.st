@@ -43,6 +43,19 @@ MyLinkedListTest >> testIsEmpty [
 ]
 
 { #category : #tests }
+MyLinkedListTest >> testRemove [
+	| list  |
+	list  := MyLinkedList  new.
+	list add:  #first.
+	list add: #second.
+	list add: #third.
+	self assert: list size equals: 3.
+	list remove: 2.
+	self assert: (list at: 2) equals: #third.
+	self assert: list size equals: 2.
+]
+
+{ #category : #tests }
 MyLinkedListTest >> testRemoveAll [
 	| list  |
 	list  := MyLinkedList  new.

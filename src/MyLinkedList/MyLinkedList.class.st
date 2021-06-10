@@ -54,8 +54,25 @@ MyLinkedList >> at: anInteger put: anObject [
 	[ anInteger = count ] whileFalse: [ 
 	count:=count+1.
 		current := current nextNode.].
-	current value: anObject . 
+	current value: anObject. 
 	^current value.
+	
+	
+]
+
+{ #category : #accessing }
+MyLinkedList >> remove: anInteger [ 
+	| current count |
+	anInteger < 1 ifTrue:
+		 [self errorSubscriptBounds: anInteger].
+	current:=head.
+	count:=1. 
+	[ anInteger-1 = count ] whileFalse: [ 
+		count:=count+1.
+		current := current nextNode.].
+		current nextNode: (current nextNode) nextNode.
+		^current nextNode.
+	
 	
 	
 ]
