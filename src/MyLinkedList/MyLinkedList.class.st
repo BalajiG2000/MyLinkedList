@@ -45,6 +45,22 @@ MyLinkedList >> at: anInteger [
 ]
 
 { #category : #accessing }
+MyLinkedList >> at: anInteger put: anObject [
+	| current count |
+	anInteger < 1 ifTrue:
+		 [self errorSubscriptBounds: anInteger].
+	current:=head.
+	count:=1. 
+	[ anInteger = count ] whileFalse: [ 
+	count:=count+1.
+		current := current nextNode.].
+	current value: anObject . 
+	^current value.
+	
+	
+]
+
+{ #category : #accessing }
 MyLinkedList >> removeAll [
 "removes all the nodes in the list but doesnot delete the nodes and memory"
 	head:=nil.
