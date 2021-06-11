@@ -37,7 +37,7 @@ MyLinkedList >> at: anInteger [
 	current:=head.
 	count:=1. 
 	[ anInteger = count ] whileFalse: [ 
-	count:=count+1.
+		count:=count+1.
 		current := current nextNode.].
 	^ current value. 
 	
@@ -52,7 +52,7 @@ MyLinkedList >> at: anInteger put: anObject [
 	current:=head.
 	count:=1. 
 	[ anInteger = count ] whileFalse: [ 
-	count:=count+1.
+		count:=count+1.
 		current := current nextNode.].
 	current value: anObject. 
 	^current value.
