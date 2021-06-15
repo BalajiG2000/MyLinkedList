@@ -66,7 +66,7 @@ MyLinkedList >> do: aBlock [
 	current:=head.
 	[ current isNil ] whileFalse: [ 
 	aBlock value: (current value).
-	current := current nextNode.] .
+	current := current nextNode.].
 	 
 ]
 
@@ -110,6 +110,20 @@ MyLinkedList >> removeAll [
 "removes all the nodes in the list but doesnot delete the nodes and memory"
 	head:=nil.
 	tail:=nil. 
+]
+
+{ #category : #enumerating }
+MyLinkedList >> select: aBlock [
+	| current collection temp |
+	current:=head.
+	collection:= OrderedCollection new.
+	[ current isNil ] whileFalse: [ 
+		(aBlock value: (temp:= current value))
+		ifTrue: [collection addLast: temp.].
+		current := current nextNode] .
+	^collection
+
+
 ]
 
 { #category : #accessing }

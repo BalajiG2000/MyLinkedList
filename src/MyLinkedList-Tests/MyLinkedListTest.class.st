@@ -101,6 +101,20 @@ MyLinkedListTest >> testRemoveAll [
 ]
 
 { #category : #tests }
+MyLinkedListTest >> testSelect [
+	|collection actual expected |
+	collection := MyLinkedList new.
+	collection add: 1.
+	collection add: 2.
+	collection add: 3.
+	expected := OrderedCollection withAll: #(1 3).
+	actual := OrderedCollection new.
+	actual:= collection select: [ :each | each odd].
+	self assert: actual equals: expected.
+	
+]
+
+{ #category : #tests }
 MyLinkedListTest >> testsize [ 
 	|list|
 	list :=MyLinkedList new.
