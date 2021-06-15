@@ -60,6 +60,16 @@ MyLinkedList >> at: anInteger put: anObject [
 	
 ]
 
+{ #category : #enumerating }
+MyLinkedList >> do: aBlock [
+	| current |
+	current:=head.
+	[ current isNil ] whileFalse: [ 
+	aBlock value: (current value).
+	current := current nextNode.] .
+	 
+]
+
 { #category : #accessing }
 MyLinkedList >> remove: anInteger [ 
 	| current count |

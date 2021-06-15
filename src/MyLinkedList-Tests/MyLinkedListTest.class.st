@@ -36,6 +36,23 @@ MyLinkedListTest >> testAtPut [
 ]
 
 { #category : #tests }
+MyLinkedListTest >> testDo [
+	|collection actual expected |
+	collection := MyLinkedList new.
+	collection add: 1.
+	collection add: 2.
+	collection add: 3.
+	expected := OrderedCollection withAll: #(1 2 3).
+	actual := OrderedCollection new.
+
+	collection do: [ :each |
+   		actual add: each ].
+
+	self assert: actual equals: expected.
+	
+]
+
+{ #category : #tests }
 MyLinkedListTest >> testIsEmpty [
 	| list |
 	list := MyLinkedList new.
