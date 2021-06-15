@@ -78,6 +78,20 @@ MyLinkedListTest >> testLast [
 ]
 
 { #category : #tests }
+MyLinkedListTest >> testReject [
+	|collection actual expected |
+	collection := MyLinkedList new.
+	collection add: 1.
+	collection add: 2.
+	collection add: 3.
+	expected := OrderedCollection withAll: #(2).
+	actual := OrderedCollection new.
+	actual:= collection reject: [ :each | each odd].
+	self assert: actual equals: expected.
+	
+]
+
+{ #category : #tests }
 MyLinkedListTest >> testRemove [
 	| list  |
 	list  := MyLinkedList  new.

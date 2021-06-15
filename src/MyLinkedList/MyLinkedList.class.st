@@ -88,6 +88,20 @@ MyLinkedList >> last [
 	^ current value.]
 ]
 
+{ #category : #enumerating }
+MyLinkedList >> reject: aBlock [
+	| current collection temp |
+	current:=head.
+	collection:= OrderedCollection new.
+	[ current isNil ] whileFalse: [ 
+		(aBlock value: (temp:= current value))
+		ifFalse: [collection addLast: temp.].
+		current := current nextNode].
+	^collection
+
+
+]
+
 { #category : #accessing }
 MyLinkedList >> remove: anInteger [ 
 	| current count |
