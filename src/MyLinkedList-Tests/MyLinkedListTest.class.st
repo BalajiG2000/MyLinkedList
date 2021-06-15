@@ -53,6 +53,15 @@ MyLinkedListTest >> testDo [
 ]
 
 { #category : #tests }
+MyLinkedListTest >> testFirst [
+	|list|
+	list :=MyLinkedList new.
+	list add: #first; add: #second.
+	self assert: list first equals: #first.
+
+]
+
+{ #category : #tests }
 MyLinkedListTest >> testIsEmpty [
 	| list |
 	list := MyLinkedList new.

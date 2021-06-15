@@ -71,6 +71,15 @@ MyLinkedList >> do: aBlock [
 ]
 
 { #category : #accessing }
+MyLinkedList >> first [
+
+	| current |
+	current:=head.
+	[ current isNil ] whileFalse: [ 
+	^ current value.]
+]
+
+{ #category : #accessing }
 MyLinkedList >> remove: anInteger [ 
 	| current count |
 	anInteger < 1 ifTrue:
