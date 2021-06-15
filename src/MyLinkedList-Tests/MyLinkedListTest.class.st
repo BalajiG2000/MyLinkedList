@@ -69,6 +69,15 @@ MyLinkedListTest >> testIsEmpty [
 ]
 
 { #category : #tests }
+MyLinkedListTest >> testLast [
+	|list|
+	list :=MyLinkedList new.
+	list add: #first; add: #second.
+	self assert: list last equals: #second.
+
+]
+
+{ #category : #tests }
 MyLinkedListTest >> testRemove [
 	| list  |
 	list  := MyLinkedList  new.

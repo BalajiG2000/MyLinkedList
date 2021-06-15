@@ -80,6 +80,15 @@ MyLinkedList >> first [
 ]
 
 { #category : #accessing }
+MyLinkedList >> last [
+
+	| current |
+	current:=tail.
+	[ current isNil ] whileFalse: [ 
+	^ current value.]
+]
+
+{ #category : #accessing }
 MyLinkedList >> remove: anInteger [ 
 	| current count |
 	anInteger < 1 ifTrue:
