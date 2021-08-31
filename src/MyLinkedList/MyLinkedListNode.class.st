@@ -19,7 +19,10 @@ MyLinkedListNode >> nextNode [
 
 { #category : #accessing }
 MyLinkedListNode >> nextNode: aNode [
-    nextNode := aNode 
+
+	"a comment "
+
+	nextNode := aNode
 ]
 
 { #category : #accessing }
