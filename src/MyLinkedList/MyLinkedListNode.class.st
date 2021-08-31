@@ -27,6 +27,9 @@ MyLinkedListNode >> nextNode: aNode [
 
 { #category : #accessing }
 MyLinkedListNode >> value [
+
+	"comment"
+
 	^ value
 ]
 
